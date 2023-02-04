@@ -1,14 +1,16 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-    name: cluster_in_existing_vpc
+    name: cluster-in-existing-vpc
     region: us-east-1
 vpc:
     subnets:
         private:
             us-east-1e: {id: subnet-010a359101a2362a0}
+            us-east-1c: {id: subnet-0121b0bfccc0f01ee}
         public:
             us-easy-1a: {id: subnet-03d23b5f4535d48e8}
+            us-easy-1b: {id: subnet-0d24c64fa5d828860}
 nodeGroups:
     - name: eks-node-01-public
       instanceType: t2.micro
